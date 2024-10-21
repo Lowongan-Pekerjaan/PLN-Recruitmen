@@ -8,9 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            color: #343a40;
+            font-family: Arial, sans-serif;
         }
         .logo {
             max-height: 50px;
@@ -18,27 +16,28 @@
         .lowongan-list {
             margin: 40px 0;
         }
-        .job-card {
-            border: none;
-            border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background: white;
+        .job-table {
+            background: #ffffff;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
-        .job-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #007bff; /* Warna judul */
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eaeaea;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
         }
         .btn-detail {
             background-color: #28a745;
             color: white;
-            border-radius: 20px; /* Menambahkan radius pada tombol */
         }
         .btn-detail:hover {
             background-color: #218838;
@@ -91,61 +90,50 @@
     <section class="lowongan-list">
         <div class="container">
             <h2 class="text-center mb-4">Posisi Lowongan Tersedia</h2>
-            <div class="row">
-                <!-- Job Card 1 -->
-                <div class="col-md-4">
-                    <div class="card job-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Engineer Listrik</h5>
-                            <p class="card-text">Lokasi: Domisili Terdekat</p>
-                            <p class="card-text">Kualifikasi: SMA, SMK, D3, S1</p>
-                            <a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Job Card 2 -->
-                <div class="col-md-4">
-                    <div class="card job-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Administrasi</h5>
-                            <p class="card-text">Lokasi: Domisili Terdekat</p>
-                            <p class="card-text">Kualifikasi: SMA, SMK, D3, S1</p>
-                            <a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Job Card 3 -->
-                <div class="col-md-4">
-                    <div class="card job-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Manajer Proyek</h5>
-                            <p class="card-text">Lokasi: Domisili Terdekat</p>
-                            <p class="card-text">Kualifikasi: SMA, SMK, D3, S1</p>
-                            <a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Job Card 4 -->
-                <div class="col-md-4">
-                    <div class="card job-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Teknisi Jaringan</h5>
-                            <p class="card-text">Lokasi: Domisili Terdekat</p>
-                            <p class="card-text">Kualifikasi: SMA, SMK, D3, S1</p>
-                            <a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Job Card 5 -->
-                <div class="col-md-4">
-                    <div class="card job-card">
-                        <div class="card-body">
-                            <h5 class="card-title">Operator Pembangkitan</h5>
-                            <p class="card-text">Lokasi: Domisili Terdekat</p>
-                            <p class="card-text">Kualifikasi: SMA, SMK, D3, S1</p>
-                            <a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a>
-                        </div>
-                    </div>
+            <div class="job-table">
+                <div class="table-responsive"> <!-- Added this div for responsiveness -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Posisi</th>
+                                <th>Lokasi</th>
+                                <th>Kualifikasi</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Engineer Listrik</td>
+                                <td>Domisili Terdekat</td>
+                                <td>SMA, SMK, D3, S1</td>
+                                <td><a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a></td>
+                            </tr>
+                            <tr>
+                                <td>Administrasi</td>
+                                <td>Domisili Terdekat</td>
+                                <td>SMA, SMK, D3, S1</td>
+                                <td><a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a></td>
+                            </tr>
+                            <tr>
+                                <td>Manajer Proyek</td>
+                                <td>Domisili Terdekat</td>
+                                <td>SMA, SMK, D3, S1</td>
+                                <td><a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a></td>
+                            </tr>
+                            <tr>
+                                <td>Teknisi Jaringan</td>
+                                <td>Domisili Terdekat</td>
+                                <td>SMA, SMK, D3, S1</td>
+                                <td><a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a></td>
+                            </tr>
+                            <tr>
+                                <td>Operator Pembangkitan</td>
+                                <td>Domisili Terdekat</td>
+                                <td>SMA, SMK, D3, S1</td>
+                                <td><a href="lamar.html" class="btn btn-detail">Pengajuan Pelamaran</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -162,6 +150,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-RZ4gE5+0BNmSIF8p1K4z5OcoHE9ClBQ1v/PYh5HDBrE0Ib9zJZ5yKqJ1/yYbMoy0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-RZ4gE5+0BNmSIF8p1K4z5OcoHE9ClBQ1v/PYh5HDBrE0Ib9zJZ5yKqJ1/yYbMoy0" crossorigin="anonymous"></script>
 </body>
 </html>
